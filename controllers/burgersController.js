@@ -17,18 +17,18 @@ burger.selectAll(function(data) {
 });
 });
 
-router.post('/burgers', function(req, res) {
+router.post("/burgers", function(req, res) {
 burger.insertOne([
-  'burger_name'
+  "burger_name"
 ], [
   req.body.burger_name
 ], function(data) {
-  res.redirect('/');
+  res.redirect("/");
 });
 });
 
 router.put("/burgers/:id", function(req, res) {
-var condition = 'id = ' + req.params.id;
+var condition = "id = " + req.params.id;
 
 burger.updateOne({
   devoured: true

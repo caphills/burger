@@ -1,0 +1,56 @@
+<div class='container m-5'>
+  
+  <div class='row'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+      <img src="../../assets/images/burger.png" class='img-fluid mx-auto d-block' alt="Burger pic">
+    </div>
+    <div class='col-md-2'></div>
+  </div>
+
+  <div class='row'>
+    <div class='col-12 text-center mb-3'>
+      <h1 class="heading mb-3">Eat Dat Burger!</h1>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-2'></div>
+    <div class='col-4 text-center'>
+      <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <li>
+              {{> burgers/devour-burger}}
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class='col-4'>
+      <ul>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <li class=' p-2 border border-secondary m-2'>
+              <del>{{this.burger_name}}</del>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class='col-2'></div>
+  </div>
+
+  <div class='row my-5'>
+    <div class='col-12 text-center'>
+      <form class="create-form">
+        <div class="form-group">
+          <input type="text" id="new_burger" name="burger_name" placeholder="Enter a new burger!">
+        </div>
+        <button type="submit" class="btn btn-sm">Submit</button>
+        <p class="new_instructions mt-2">enter da burger you want to eat</p>
+      </form>
+    </div>
+  </div>
+
+</div>
