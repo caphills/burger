@@ -1,4 +1,22 @@
 body {
   font-family: 'Tangerine', serif;
-  font-size: 48px;
+  font-size: 14px;
+}
+html {
+  background-color: #FFC04C;
+}
+
+
+.change_devour {
+  font-size: 1px;
+}
+
+.eaten {
+  font-style: strike;
+  text-align: end;
+}
+
+.new_instructions {
+  font-family: 'Tangerine', serif;
+  font-size: 14px;
 }
