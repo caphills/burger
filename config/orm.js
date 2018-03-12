@@ -60,8 +60,8 @@ updateOne: function(table, objColVals, condition, cb) {
       queryString += objToSql(objColVals);
       queryString += " WHERE ";
       queryString += condition;
-
   // console.log(queryString);
+  
   // Perform the database query
   connection.query(queryString, function(err, result) {
           if (err) {
