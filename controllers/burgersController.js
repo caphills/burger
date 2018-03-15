@@ -3,7 +3,7 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (burger.js) to use its db functions
+// Import the model (burger.js) 
 var burger = require("../models/burger.js");
 
 // Create the routes and associated logic
@@ -12,7 +12,7 @@ burger.selectAll(function(data) {
   var hbsObject = {
     burgers: data
   };
-  // console.log(hbsObject);
+  
   res.render("index", hbsObject);
 });
 });

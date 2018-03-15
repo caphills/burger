@@ -1,22 +1,40 @@
 body {
   font-family: 'Tangerine', serif;
-  font-size: 14px;
+  font-size: 40px;
+  width: 75%;
+	margin: 0 auto; 
+
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: white;
 }
 html {
   background-color: #FFC04C;
 }
 
 
-.change_devour {
-  font-size: 1px;
+h2 {
+text-align: center;
+ font-family: 'Tangerine', serif;
+ font-size: 40px;
+ margin: 50px;
 }
-
-.eaten {
-  font-style: strike;
-  text-align: end;
-}
-
-.new_instructions {
+h1 {
+  text-align: center;
   font-family: 'Tangerine', serif;
-  font-size: 14px;
+  font-size: 40px;
+  margin: 50px;
 }
+ul {
+  list-style: none;
+}
+
+.burger {
+  text-align: right;
+}
+
+.change-devour {
+  font-size: 40px;
+}
+

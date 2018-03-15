@@ -1,0 +1,61 @@
+<div class='container m-5'>
+  
+ <div class='row'>
+  <div class='col-md-2'></div>
+  <div class='col-md-8'>
+      <img src="../../assets/images/burger.png" class='img-fluid mx-auto d-block' alt="Burger pic">
+    </div>
+    <div class='col-md-2'></div>
+  </div>
+
+  <div class='row'>
+    <div class='col-12 text-center mb-3'>
+      <h1 class="heading mb-3">Eat Dat Burger!</h1>
+      <div class="col-4"></div>
+    </div>
+  </div>
+
+<div class='row'>
+    <div class='col-4'></div>
+    <div class='col-4 text-center mb-3'>
+    {{!-- <h2>Burgers not devoured!</h2> --}}
+      <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            {{> daburger devoured=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+      <div class='col-4'></div>
+    </div>
+  
+   {{!-- <div class='row'> --}}
+    <div class='col-4'></div>
+    <div class='col-4 text-center mb-3'>
+      {{!-- <h2>Burgers devoured!</h2> --}}
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> daburger devoured=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+      <div class='col-4'></div>
+      </div>
+   </div>
+<h2>Add a burger</h2>
+ 
+   <div class='row'>
+    <div class='col-4'></div>
+    <div class='col-4 text-center mb-3'>
+      <form class="create-form">
+        <div class="form-group">
+          <input type="text" id="new_burger" name="burger_name">
+        </div>
+        <button type="submit" class="btn btn-bg">Submit</button>
+      </form>
+      <div class='col-4'></div>
+    </div>
+  </div>
+
+</div>
